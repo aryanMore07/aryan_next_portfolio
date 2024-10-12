@@ -1,7 +1,5 @@
+import HomePageComponent from "@/components/home_page_components/HomePageComponent";
+
 export default function Home() {
-  return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
-  );
+  return <HomePageComponent />;
 }
