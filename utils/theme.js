@@ -1,3 +1,4 @@
+"use client";
 import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
@@ -15,7 +16,7 @@ export const theme = createTheme({
       main: "#fea500",
     },
     secondary: {
-      main: "#000",
+      main: "#fff",
     },
   },
 });
