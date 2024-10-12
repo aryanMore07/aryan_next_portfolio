@@ -1,4 +1,6 @@
+import { ThemeProvider } from "@mui/material/styles";
 import "./globals.css";
+import { theme } from "@/utils/theme";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,7 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
