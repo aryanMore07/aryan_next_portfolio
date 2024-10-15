@@ -1,5 +1,4 @@
 "use client";
-
 import TechStack from "./TechStack";
 import TopSection from "./TopSection";
 

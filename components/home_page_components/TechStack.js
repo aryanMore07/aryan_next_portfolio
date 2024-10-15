@@ -12,10 +12,14 @@ const Container = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  [theme.breakpoints.down("sm")]: {
+    padding: `${theme.spacing(5)} 0px`,
+  },
 }));
 
 const InnerContainer = styled(Box)(({ theme }) => ({
   maxWidth: "1240px",
+  width: "90%",
   height: "100%",
   margin: "auto",
 }));
@@ -28,12 +32,20 @@ const Heading = styled(Typography)(({ theme }) => ({
   color: "#fff",
   fontFamily: "Pacifico, cursive",
   marginBottom: theme.spacing(6),
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "28px",
+    marginBottom: theme.spacing(4),
+  },
 }));
 
 const LogoContainer = styled(Box)(({ theme }) => ({
   width: "100px",
   height: "100px",
   marginBottom: theme.spacing(2),
+  [theme.breakpoints.down("sm")]: {
+    width: "60px",
+    height: "60px",
+  },
 }));
 
 const Logo = styled(Image)(({ theme }) => ({
@@ -47,7 +59,10 @@ const Text = styled(Typography)(({ theme }) => ({
   fontWeight: 400,
   textAlign: "center",
   color: "#fff",
-  fontFamily: "Pacifico, cursive",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "16px",
+    lineHeight: "24px",
+  },
 }));
 
 function TechStack() {

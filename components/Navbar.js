@@ -4,6 +4,7 @@ import {
   AppBar,
   Box,
   Button,
+  IconButton,
   Slide,
   Typography,
   useScrollTrigger,
@@ -13,6 +14,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { MdDownload } from "react-icons/md";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Container = styled(AppBar)(({ theme }) => ({
   width: "100%",
@@ -38,6 +40,9 @@ const Heading = styled(Typography)(({ theme }) => ({
   color: "#fff",
   textWrap: "nowrap",
   cursor: "pointer",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "18px",
+  },
 }));
 
 const MiddleContainer = styled(Box)(({ theme }) => ({
@@ -47,6 +52,9 @@ const MiddleContainer = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   gap: theme.spacing(4),
+  [theme.breakpoints.down("md")]: {
+    display: "none",
+  },
 }));
 
 const DownloadBtn = styled(Button)(({ theme }) => ({
@@ -61,6 +69,9 @@ const DownloadBtn = styled(Button)(({ theme }) => ({
     color: theme.palette.secondary.main,
     backgroundColor: theme.palette.primary.main,
     border: `1px solid ${theme.palette.secondary.main}`,
+  },
+  [theme.breakpoints.down("md")]: {
+    display: "none",
   },
 }));
 
@@ -83,6 +94,15 @@ const LinkComponent = styled(Link)(({ theme }) => ({
   },
   "&:hover::after": {
     width: "100%",
+  },
+}));
+
+const HanbergerMenuBtn = styled(IconButton)(({ theme }) => ({
+  display: "none",
+  [theme.breakpoints.down("md")]: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
@@ -124,6 +144,9 @@ function Navbar(props) {
           <DownloadBtn endIcon={<MdDownload />} variant="outlined">
             Download Resume
           </DownloadBtn>
+          <HanbergerMenuBtn>
+            <MenuIcon sx={{ color: "#fff" }} />
+          </HanbergerMenuBtn>
         </InnerContainer>
       </Container>
     </HideOnScroll>

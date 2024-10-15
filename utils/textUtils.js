@@ -81,3 +81,30 @@ I'm a frontend developer skilled in React, Next.js, and MUI. I build responsive,
     ],
   },
 };
+
+export const footer_context = {
+  title: "Aryan More",
+  middle_text: "Made with 💜 in NextJS",
+  social_links: [
+    {
+      _id: "6f61762b-85f4-4acd-8ab4-61b49b0bd079",
+      text: "LinkedIn",
+      path: "https://in.linkedin.com/in/aryan-more-417497216",
+    },
+    {
+      _id: "a8fffd9f-c620-4ff6-b562-b4a9eef92109",
+      text: "X (Formerly Twitter)",
+      path: "https://x.com/aRYNMore2110",
+    },
+    {
+      _id: "4a96f66d-ac85-43c0-8a69-81aca6a9153f",
+      text: "Github",
+      path: "https://github.com/aryanMore07",
+    },
+    {
+      _id: "b6cc14a9-8de4-4dcb-92c2-fd0377497349",
+      text: "Gmail",
+      path: "mailto:aryanmore498@gmail.com",
+    },
+  ],
+};

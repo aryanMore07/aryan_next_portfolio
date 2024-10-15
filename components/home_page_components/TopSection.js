@@ -17,6 +17,9 @@ const Container = styled(Box)(({ theme }) => ({
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   backgroundPosition: "center",
+  [theme.breakpoints.down("sm")]: {
+    padding: `${theme.spacing(5)} 0px`,
+  },
 }));
 
 const InnerContainer = styled(Box)(({ theme }) => ({
@@ -40,6 +43,12 @@ const ImageComponent = styled(Image)(({ theme }) => ({
   borderRadius: "50%",
   padding: theme.spacing(5),
   backgroundImage: "linear-gradient(225deg, #800080 5%, #ffffff 95%)",
+  [theme.breakpoints.down("sm")]: {
+    width: "200px",
+    height: "200px",
+    marginBottom: theme.spacing(3),
+    padding: theme.spacing(2.5),
+  },
 }));
 
 const TextContainer = styled(Box)(({ theme }) => ({
@@ -55,6 +64,10 @@ const Heading = styled(Box)(({ theme }) => ({
   fontFamily: "Pacifico, cursive",
   color: theme.palette.primary.main,
   marginBottom: theme.spacing(3),
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "28px",
+    marginBottom: theme.spacing(1.5),
+  },
 }));
 
 const SubHeading = styled(Box)(({ theme }) => ({
@@ -62,6 +75,10 @@ const SubHeading = styled(Box)(({ theme }) => ({
   fontFamily: "Pacifico, cursive",
   color: theme.palette.primary.main,
   marginBottom: theme.spacing(0.5),
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "18px",
+    marginBottom: theme.spacing(1.5),
+  },
 }));
 
 const Text = styled(Box)(({ theme }) => ({
@@ -69,6 +86,9 @@ const Text = styled(Box)(({ theme }) => ({
   fontFamily: "Poppins",
   color: "#000",
   lineHeight: "28px",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "16px",
+  },
 }));
 
 function TopSection() {
