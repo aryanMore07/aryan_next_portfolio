@@ -6,6 +6,16 @@ import NextJsLogo from "@/public/tech-logos/nextjs.svg";
 import ReduxLogo from "@/public/tech-logos/redux.svg";
 import MaterialUi from "@/public/tech-logos/material-ui.svg";
 import Githublogo from "@/public/tech-logos/github.svg";
+import projectImageOne from "@/public/projects_assets/project_one.png";
+import projectImageTwo from "@/public/projects_assets/project_two.png";
+import projectImageThree from "@/public/projects_assets/project_three.png";
+import projectImageFour from "@/public/projects_assets/project_four.png";
+import projectImageFive from "@/public/projects_assets/project_five.png";
+import projectImageSix from "@/public/projects_assets/project_six.png";
+import projectImageSeven from "@/public/projects_assets/project_seven.png";
+import projectImageEight from "@/public/projects_assets/project_eight.png";
+import projectImageNine from "@/public/projects_assets/project_nine.png";
+import projectImageten from "@/public/projects_assets/project_ten.png";
 
 export const navbar_context = {
   menu_links: [
@@ -105,6 +115,161 @@ export const footer_context = {
       _id: "b6cc14a9-8de4-4dcb-92c2-fd0377497349",
       text: "Gmail",
       path: "mailto:aryanmore498@gmail.com",
+    },
+  ],
+};
+
+export const projectpage_context = {
+  title: "Projects",
+  points: [
+    {
+      _id: "50a050f1-aec2-4994-8404-08fefe5fc6fd",
+      image: projectImageOne,
+      title: "Chat More | Social Media Application",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://chat-more.netlify.app/welcome/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/shop-more-v1/",
+        },
+      },
+    },
+    {
+      _id: "d4127312-f12e-4cc1-baaf-9e164d1b3c92",
+      image: projectImageTwo,
+      title: "Shop More | E-commerce website",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://shop-more-co.netlify.app/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/shop-more-v1/",
+        },
+      },
+    },
+    {
+      _id: "27cbdac5-2974-45a6-9f3b-0d5feef6c3fa",
+      image: projectImageThree,
+      title: "Shop More | E-commerce website",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://krwn-clothing.netlify.app/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/crwn-clothing-v2/",
+        },
+      },
+    },
+    {
+      image: projectImageFour,
+      title: "Random Advice Generator",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://random-advices-app.netlify.app/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/advice-generator-app/",
+        },
+      },
+    },
+    {
+      _id: "6d72c745-2bbd-4422-83bd-ec043faddb41",
+      image: projectImageFive,
+      title: "The Minnion Speak Translator",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://marksixth.netlify.app/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/markSix/",
+        },
+      },
+    },
+    {
+      _id: "64b8095d-51b3-4f68-8c61-0b95ff11c832",
+      image: projectImageSix,
+      title: "Phineas & Ferb Translator",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://markseventh.netlify.app/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/markSeventh/",
+        },
+      },
+    },
+    {
+      _id: "07a57b1b-91c0-4792-b27a-207e8c4c2dc5",
+      image: projectImageSeven,
+      title: "Emoji Interpreter",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://markeight.netlify.app/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/markEigth/",
+        },
+      },
+    },
+    {
+      _id: "0826b00e-5efb-4f71-9b77-612e707379d2",
+      image: projectImageEight,
+      title: "Recommendation App",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://markninth.netlify.app/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/markNinth",
+        },
+      },
+    },
+    {
+      _id: "9151c529-558a-4de0-8da0-99cf147b1595",
+      image: projectImageNine,
+      title: "Cash Register App",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://marktenth.netlify.app/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/markTen",
+        },
+      },
+    },
+    {
+      _id: "13a30d01-a718-4258-bbe8-b50cad9a6e2e",
+      image: projectImageten,
+      title: "Stock Profit & Loss App",
+      btn_texts: {
+        live_project_btn_context: {
+          text: "Live link",
+          link: "https://markfourteenth.netlify.app/",
+        },
+        source_code_btn_context: {
+          text: "Source Code",
+          link: "https://github.com/aryanMore07/markFourteen",
+        },
+      },
     },
   ],
 };

@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
@@ -17,12 +17,14 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import MailIcon from "@mui/icons-material/Mail";
 import { theme } from "@/utils/theme";
 
-const Container = styled(Box)(({ theme }) => ({
+const Container = styled(Box)(({ theme, isHomePage }) => ({
   width: "100%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: theme.palette.secondary.main,
+  backgroundColor: isHomePage
+    ? theme.palette.secondary.main
+    : theme.palette.primary.main,
 }));
 
 const InnerContainer = styled(Box)(({ theme }) => ({
@@ -35,12 +37,12 @@ const InnerContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
 }));
 
-const Heading = styled(Typography)(({ theme }) => ({
+const Heading = styled(Typography)(({ theme, isHomePage }) => ({
   fontSize: "24px",
   fontWeight: 400,
   lineHeight: "32px",
   fontFamily: "Pacifico, cursive",
-  color: theme.palette.primary.main,
+  color: isHomePage ? theme.palette.primary.main : "#fff",
   textWrap: "nowrap",
   cursor: "pointer",
   margin: "0px",
@@ -49,12 +51,13 @@ const Heading = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const MiddleText = styled(Typography)(({ theme }) => ({
+const MiddleText = styled(Typography)(({ theme, isHomePage }) => ({
   fontSize: "18px",
   fontWeight: 400,
   lineHeight: "26px",
   color: "#000",
   margin: "0px",
+  color: isHomePage ? "#000" : "#fff",
   [theme.breakpoints.down("md")]: {
     display: "none",
   },
@@ -77,38 +80,45 @@ const IconButtonComponent = styled(IconButton)(({ theme }) => ({
   },
 }));
 
-const iconsStyles = {
-  color: "#000",
-  fontSize: "20px",
+const iconsStyles = (currentPath) => {
+  if (currentPath) {
+    return { color: "#000", fontSize: "20px" };
+  } else {
+    return { color: "#fff", fontSize: "20px" };
+  }
 };
 
 function Footer() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const router = useRouter();
+  const pathName = usePathname();
 
   const renderIcons = (text) => {
     if (text === "LinkedIn") {
-      return <LinkedInIcon style={iconsStyles} />;
+      return <LinkedInIcon style={iconsStyles(pathName === "/")} />;
     } else if (text === "X (Formerly Twitter)") {
-      return <XIcon style={iconsStyles} />;
+      return <XIcon style={iconsStyles(pathName === "/")} />;
     } else if (text === "Github") {
-      return <GitHubIcon style={iconsStyles} />;
+      return <GitHubIcon style={iconsStyles(pathName === "/")} />;
     } else {
-      return <MailIcon style={iconsStyles} />;
+      return <MailIcon style={iconsStyles(pathName === "/")} />;
     }
   };
 
   return (
-    <Container>
+    <Container isHomePage={pathName === "/"}>
       <InnerContainer>
         <Heading
+          isHomePage={pathName === "/"}
           onClick={() => {
             router.push("/");
           }}
         >
           {footer_context.title}
         </Heading>
-        <MiddleText>{footer_context.middle_text}</MiddleText>
+        <MiddleText isHomePage={pathName === "/"}>
+          {footer_context.middle_text}
+        </MiddleText>
         <SocialLinksContainer>
           {footer_context.social_links.map((data) => {
             return (
