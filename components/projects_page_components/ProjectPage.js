@@ -42,7 +42,7 @@ function ProjectPage() {
         <Grid2 container spacing={2}>
           {projectpage_context.points.map((data) => {
             return (
-              <Grid2 key={data._id} size={{ md: 4 }}>
+              <Grid2 key={data._id} size={{ xs: 12, sm: 6, md: 4 }}>
                 <ProjectCard data={data} />
               </Grid2>
             );

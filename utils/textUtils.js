@@ -125,7 +125,16 @@ export const projectpage_context = {
     {
       _id: "50a050f1-aec2-4994-8404-08fefe5fc6fd",
       image: projectImageOne,
-      title: "Chat More | Social Media Application",
+      title: "Chat More | Social Media App",
+      text: "ChatMore is a React social app for profiles, posts, and interactions.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+        { text: "REACTJS", type: "reactjs" },
+        { text: "MUI", type: "mui" },
+        { text: "BOOTSTRAP", type: "bootstrap" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
@@ -133,14 +142,23 @@ export const projectpage_context = {
         },
         source_code_btn_context: {
           text: "Source Code",
-          link: "https://github.com/aryanMore07/shop-more-v1/",
+          link: "https://github.com/aryanMore07/chat-more/",
         },
       },
     },
     {
       _id: "d4127312-f12e-4cc1-baaf-9e164d1b3c92",
       image: projectImageTwo,
-      title: "Shop More | E-commerce website",
+      title: "Shop More | E-commerce App",
+      text: "ShopMore is a React eCommerce platform with authentication and easy checkout.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+        { text: "REACTJS", type: "reactjs" },
+        { text: "MUI", type: "mui" },
+        { text: "BOOTSTRAP", type: "bootstrap" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
@@ -155,7 +173,16 @@ export const projectpage_context = {
     {
       _id: "27cbdac5-2974-45a6-9f3b-0d5feef6c3fa",
       image: projectImageThree,
-      title: "Shop More | E-commerce website",
+      title: "krwn-clothing | E-commerce App",
+      text: "Krwn-Clothing is a React app for clothing e-commerce, using React, Redux and Firebase.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+        { text: "REACTJS", type: "reactjs" },
+        { text: "MUI", type: "mui" },
+        { text: "BOOTSTRAP", type: "bootstrap" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
@@ -170,6 +197,15 @@ export const projectpage_context = {
     {
       image: projectImageFour,
       title: "Random Advice Generator",
+      text: "The random advice generator is a React app that fetches advice from the Advice Slip API.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+        { text: "REACTJS", type: "reactjs" },
+        { text: "MUI", type: "mui" },
+        { text: "BOOTSTRAP", type: "bootstrap" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
@@ -185,6 +221,12 @@ export const projectpage_context = {
       _id: "6d72c745-2bbd-4422-83bd-ec043faddb41",
       image: projectImageFive,
       title: "The Minnion Speak Translator",
+      text: "The Minion Speak Translator converts text to Minion language using the FunTranslations API.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
@@ -200,6 +242,12 @@ export const projectpage_context = {
       _id: "64b8095d-51b3-4f68-8c61-0b95ff11c832",
       image: projectImageSix,
       title: "Phineas & Ferb Translator",
+      text: "The Phineas & Ferb Translator converts text to their language using the FunTranslations API.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
@@ -215,6 +263,15 @@ export const projectpage_context = {
       _id: "07a57b1b-91c0-4792-b27a-207e8c4c2dc5",
       image: projectImageSeven,
       title: "Emoji Interpreter",
+      text: "The Emoji Interpreter app provides meanings for emojis from a predefined object.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+        { text: "REACTJS", type: "reactjs" },
+        { text: "MUI", type: "mui" },
+        { text: "BOOTSTRAP", type: "bootstrap" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
@@ -230,6 +287,15 @@ export const projectpage_context = {
       _id: "0826b00e-5efb-4f71-9b77-612e707379d2",
       image: projectImageEight,
       title: "Recommendation App",
+      text: "The Recommendation App is a React platform that displays games and their IGN ratings.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+        { text: "REACTJS", type: "reactjs" },
+        { text: "MUI", type: "mui" },
+        { text: "BOOTSTRAP", type: "bootstrap" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
@@ -245,6 +311,12 @@ export const projectpage_context = {
       _id: "9151c529-558a-4de0-8da0-99cf147b1595",
       image: projectImageNine,
       title: "Cash Register App",
+      text: "The Cash Register App calculates change using bill amount and cash with denominations: 2000, 500, 100, 20, 10, and 1.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
@@ -260,6 +332,12 @@ export const projectpage_context = {
       _id: "13a30d01-a718-4258-bbe8-b50cad9a6e2e",
       image: projectImageten,
       title: "Stock Profit & Loss App",
+      text: "The Stock Profit & Loss App calculates profit or loss based on price and quantity, indicating losses in red and profits in green.",
+      tech_stacks: [
+        { text: "HTML", type: "html" },
+        { text: "CSS", type: "css" },
+        { text: "JAVASCRIPT", type: "javascript" },
+      ],
       btn_texts: {
         live_project_btn_context: {
           text: "Live link",
