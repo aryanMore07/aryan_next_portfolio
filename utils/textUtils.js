@@ -351,3 +351,7 @@ export const projectpage_context = {
     },
   ],
 };
+
+export const blogs_page_context = {
+  title: "Blogs",
+};

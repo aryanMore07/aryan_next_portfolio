@@ -59,15 +59,13 @@ const MiddleContainer = styled(Box)(({ theme }) => ({
 
 const DownloadBtn = styled(Button)(({ theme }) => ({
   textWrap: "nowrap",
-  paddingLeft: theme.spacing(3),
-  paddingRight: theme.spacing(3),
   border: `1px solid ${theme.palette.primary.main}`,
-  color: theme.palette.primary.main,
-  backgroundColor: theme.palette.secondary.main,
+  color: theme.palette.secondary.main,
+  borderColor: theme.palette.secondary.main,
   textTransform: "capitalize",
   "&:hover": {
-    color: theme.palette.secondary.main,
-    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.secondary.main,
     border: `1px solid ${theme.palette.secondary.main}`,
   },
   [theme.breakpoints.down("md")]: {
@@ -121,6 +119,7 @@ function HideOnScroll(props) {
 
 function Navbar(props) {
   const router = useRouter();
+
   return (
     <HideOnScroll {...props}>
       <Container>
@@ -141,9 +140,15 @@ function Navbar(props) {
               );
             })}
           </MiddleContainer>
-          <DownloadBtn endIcon={<MdDownload />} variant="outlined">
-            Download Resume
-          </DownloadBtn>
+          <Link
+            href="/files/aryan_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <DownloadBtn endIcon={<MdDownload />} variant="outlined">
+              Download Resume
+            </DownloadBtn>
+          </Link>
           <HanbergerMenuBtn>
             <MenuIcon sx={{ color: "#fff" }} />
           </HanbergerMenuBtn>

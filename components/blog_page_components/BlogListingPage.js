@@ -1,9 +1,9 @@
 "use client";
-import { projectpage_context } from "@/utils/textUtils";
+import { blogs_page_context } from "@/utils/textUtils";
 import { Box, Grid2, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React from "react";
-import ProjectCard from "./card_widgets/ProjectCard";
+import BlogCard from "./cart_widgets/BlogCard";
 
 const Container = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -34,16 +34,16 @@ const Heading = styled(Typography)(({ theme }) => ({
   },
 }));
 
-function ProjectPage() {
+function BlogListingPage({ data }) {
   return (
     <Container>
       <InnerContainer>
-        <Heading>{projectpage_context.title}</Heading>
-        <Grid2 container spacing={2}>
-          {projectpage_context.points.map((data) => {
+        <Heading>{blogs_page_context.title}</Heading>
+        <Grid2 container spacing={2} justifyContent="center">
+          {data.map((blog, index) => {
             return (
-              <Grid2 key={data._id} size={{ xs: 12, sm: 6, md: 4 }}>
-                <ProjectCard data={data} />
+              <Grid2 item size={{ md: 3 }} key={index}>
+                <BlogCard data={blog} />
               </Grid2>
             );
           })}
@@ -53,4 +53,4 @@ function ProjectPage() {
   );
 }
 
-export default ProjectPage;
+export default BlogListingPage;
