@@ -1,6 +1,6 @@
 "use client";
 import { projectpage_context } from "@/utils/textUtils";
-import { Box, Grid2 } from "@mui/material";
+import { Box, Grid2, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React from "react";
 import ProjectCard from "./card_widgets/ProjectCard";
@@ -22,7 +22,7 @@ const InnerContainer = styled(Box)(({ theme }) => ({
   margin: "0px auto",
 }));
 
-const Heading = styled(Box)(({ theme }) => ({
+const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "32px",
   fontFamily: "Pacifico, cursive",
   color: theme.palette.primary.main,
