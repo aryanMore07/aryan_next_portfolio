@@ -118,7 +118,7 @@ function ProjectCard({ data }) {
       return (
         <Tooltip title={context.text}>
           <IconButton disableRipple>
-            <DiBootstrap />
+            <DiBootstrap style={iconStyles} />
           </IconButton>
         </Tooltip>
       );
