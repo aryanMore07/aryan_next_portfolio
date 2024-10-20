@@ -22,6 +22,7 @@ const InnerContainer = styled(Box)(({ theme }) => ({
 }));
 
 function BlogDetailsPage({ data }) {
+  console.log(data);
   return (
     <Container>
       <InnerContainer>

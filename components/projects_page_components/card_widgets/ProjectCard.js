@@ -76,7 +76,7 @@ function ProjectCard({ data }) {
   const renderIcon = (context) => {
     if (context.type === "html") {
       return (
-        <Tooltip title={context.text}>
+        <Tooltip title={context.text} key={context._id}>
           <IconButton disableRipple>
             <FaHtml5 style={iconStyles} />
           </IconButton>
@@ -84,7 +84,7 @@ function ProjectCard({ data }) {
       );
     } else if (context.type === "css") {
       return (
-        <Tooltip title={context.text}>
+        <Tooltip title={context.text} key={context._id}>
           <IconButton disableRipple>
             <FaCss3Alt style={iconStyles} />
           </IconButton>
@@ -92,7 +92,7 @@ function ProjectCard({ data }) {
       );
     } else if (context.type === "javascript") {
       return (
-        <Tooltip title={context.text}>
+        <Tooltip title={context.text} key={context._id}>
           <IconButton disableRipple>
             <IoLogoJavascript style={iconStyles} />
           </IconButton>
@@ -100,7 +100,7 @@ function ProjectCard({ data }) {
       );
     } else if (context.type === "reactjs") {
       return (
-        <Tooltip title={context.text}>
+        <Tooltip title={context.text} key={context._id}>
           <IconButton disableRipple>
             <FaReact style={iconStyles} />
           </IconButton>
@@ -108,7 +108,7 @@ function ProjectCard({ data }) {
       );
     } else if (context.type === "mui") {
       return (
-        <Tooltip title={context.text}>
+        <Tooltip title={context.text} key={context._id}>
           <IconButton disableRipple>
             <SiMui style={iconStyles} />
           </IconButton>
@@ -116,7 +116,7 @@ function ProjectCard({ data }) {
       );
     } else {
       return (
-        <Tooltip title={context.text}>
+        <Tooltip title={context.text} key={context._id}>
           <IconButton disableRipple>
             <DiBootstrap style={iconStyles} />
           </IconButton>
@@ -133,7 +133,7 @@ function ProjectCard({ data }) {
           height={500}
           style={{ width: "100%", height: "auto" }}
           src={data.image}
-          atl={data.title}
+          alt={data.title}
         />
       </ImageContainer>
       <BottomContainer>
