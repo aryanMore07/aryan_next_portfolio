@@ -42,8 +42,7 @@ export const homepage_context = {
     title: "I'm Aryan More",
     subtitle:
       "Passionate Frontend Developer | Crafting Engaging User Experiences",
-    description: `
-I'm a frontend developer skilled in React, Next.js, and MUI. I build responsive, user-friendly web applications with a focus on performance and usability. Check out my projects to see how I turn creative ideas into seamless digital experiences!`,
+    description: `I'm a frontend developer skilled in  Next.js, React.js, Redux, and MUI. I build responsive, user-friendly web applications with a focus on performance and usability. Check out my projects to see how I turn creative ideas into seamless digital experiences!`,
   },
   tech_stack_context: {
     title: "Tech Stacks",

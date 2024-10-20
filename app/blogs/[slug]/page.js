@@ -12,6 +12,15 @@ const getPostContent = (slug) => {
   return matterResult;
 };
 
+export const generateMetadata = ({ params }) => {
+  const blogData = getPostMetadata();
+
+  return {
+    title: blogData.title,
+    discription: blogData.subtitle,
+  };
+};
+
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
   return posts.map((post) => ({
