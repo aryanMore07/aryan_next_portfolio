@@ -3,6 +3,7 @@ import BlogDetailsPage from "@/components/blog_page_components/BlogDetailsPage";
 import matter from "gray-matter";
 import getPostMetadata from "@/components/getPostMetadata";
 import React from "react";
+import { url } from "inspector";
 
 const getPostContent = (slug) => {
   const folder = "posts/";
@@ -13,11 +14,15 @@ const getPostContent = (slug) => {
 };
 
 export const generateMetadata = ({ params }) => {
-  const blogData = getPostMetadata();
-
+  const blogData = getPostContent(params.slug);
   return {
-    title: blogData.title,
-    discription: blogData.subtitle,
+    title: blogData.data.title,
+    description: blogData.data.subtitle,
+    openGraph: {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${params.slug}`,
+      images: blogData.data.image,
+      description: blogData.data.subtitle,
+    },
   };
 };
 

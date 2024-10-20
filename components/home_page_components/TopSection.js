@@ -98,7 +98,7 @@ function TopSection() {
         <Grid2 container>
           <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
             <ImageContainer>
-              <ImageComponent src={aryan} alt="aryan more" />
+              <ImageComponent src={aryan} alt="Aryan More" />
             </ImageContainer>
           </Grid2>
           <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>

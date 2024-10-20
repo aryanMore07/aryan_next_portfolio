@@ -7,7 +7,7 @@ export const metadata = {
   // Title and description
   title: "Blogs | Aryan More",
   description:
-    "I'm a frontend developer skilled in Next.js, React.js, Redux, and MUI. I build responsive, user-friendly web applications with a focus on performance and usability. Check out my projects to see how I turn creative ideas into seamless digital experiences!",
+    "Explore insightful technical and non-technical blogs covering coding, development tips, and personal experiences. Stay updated with diverse topics that inspire learning and growth.",
 
   // Canonical and Alternate Links
   alternates: {
@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: "Blogs | Aryan More",
     description:
-      "I'm a frontend developer skilled in React, Next.js, and MUI. I build responsive, user-friendly web applications with a focus on performance and usability. Check out my projects to see how I turn creative ideas into seamless digital experiences!",
+      "Explore insightful technical and non-technical blogs covering coding, development tips, and personal experiences. Stay updated with diverse topics that inspire learning and growth.",
     url: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/`,
     siteName: "Aryan More",
     images: [
@@ -36,7 +36,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Blogs | Aryan More",
     description:
-      "I'm a frontend developer skilled in React, Next.js, and MUI. I build responsive, user-friendly web applications with a focus on performance and usability. Check out my projects to see how I turn creative ideas into seamless digital experiences!",
+      "Explore insightful technical and non-technical blogs covering coding, development tips, and personal experiences. Stay updated with diverse topics that inspire learning and growth.",
     image: "/opengraph-image.png",
   },
 
