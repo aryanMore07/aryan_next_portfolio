@@ -39,9 +39,14 @@ const Heading = styled(Typography)(({ theme }) => ({
 }));
 
 const LogoContainer = styled(Box)(({ theme }) => ({
-  width: "100px",
-  height: "100px",
+  width: "150px",
+  height: "150px",
   marginBottom: theme.spacing(2),
+  backgroundColor: "#fff",
+  borderRadius: "50%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   [theme.breakpoints.down("sm")]: {
     width: "60px",
     height: "60px",
@@ -49,8 +54,8 @@ const LogoContainer = styled(Box)(({ theme }) => ({
 }));
 
 const Logo = styled(Image)(({ theme }) => ({
-  width: "100%",
-  height: "100%",
+  width: "80px",
+  height: "80px",
 }));
 
 const Text = styled(Typography)(({ theme }) => ({
