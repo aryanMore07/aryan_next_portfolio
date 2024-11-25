@@ -83,7 +83,7 @@ function TechStack() {
         >
           {homepage_context.tech_stack_context.points.map((data) => {
             return (
-              <Grid2 item size={{ xs: 6, sm: 4, md: 3 }} key={data._id}>
+              <Grid2 size={{ xs: 6, sm: 4, md: 3 }} key={data._id}>
                 <Stack
                   direction="column"
                   alignItems="center"

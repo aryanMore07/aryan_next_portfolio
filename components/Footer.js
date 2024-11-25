@@ -17,12 +17,12 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import MailIcon from "@mui/icons-material/Mail";
 import { theme } from "@/utils/theme";
 
-const Container = styled(Box)(({ theme, isHomePage }) => ({
+const Container = styled(Box)(({ theme, ishomepage }) => ({
   width: "100%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: isHomePage
+  backgroundColor: ishomepage
     ? theme.palette.secondary.main
     : theme.palette.primary.main,
 }));
@@ -37,12 +37,12 @@ const InnerContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
 }));
 
-const Heading = styled(Typography)(({ theme, isHomePage }) => ({
+const Heading = styled(Typography)(({ theme, ishomepage }) => ({
   fontSize: "24px",
   fontWeight: 400,
   lineHeight: "32px",
   fontFamily: "Pacifico, cursive",
-  color: isHomePage ? theme.palette.primary.main : "#fff",
+  color: ishomepage ? theme.palette.primary.main : "#fff",
   textWrap: "nowrap",
   cursor: "pointer",
   margin: "0px",
@@ -51,13 +51,13 @@ const Heading = styled(Typography)(({ theme, isHomePage }) => ({
   },
 }));
 
-const MiddleText = styled(Typography)(({ theme, isHomePage }) => ({
+const MiddleText = styled(Typography)(({ theme, ishomepage }) => ({
   fontSize: "18px",
   fontWeight: 400,
   lineHeight: "26px",
   color: "#000",
   margin: "0px",
-  color: isHomePage ? "#000" : "#fff",
+  color: ishomepage ? "#000" : "#fff",
   [theme.breakpoints.down("md")]: {
     display: "none",
   },
@@ -106,17 +106,17 @@ function Footer() {
   };
 
   return (
-    <Container isHomePage={pathName === "/"}>
+    <Container ishomepage={pathName === "/"}>
       <InnerContainer>
         <Heading
-          isHomePage={pathName === "/"}
+          ishomepage={pathName === "/"}
           onClick={() => {
             router.push("/");
           }}
         >
           {footer_context.title}
         </Heading>
-        <MiddleText isHomePage={pathName === "/"}>
+        <MiddleText ishomepage={pathName === "/"}>
           {footer_context.middle_text}
         </MiddleText>
         <SocialLinksContainer>
