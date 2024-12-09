@@ -48,14 +48,18 @@ const LogoContainer = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   [theme.breakpoints.down("sm")]: {
-    width: "60px",
-    height: "60px",
+    width: "100px",
+    height: "100px",
   },
 }));
 
 const Logo = styled(Image)(({ theme }) => ({
   width: "80px",
   height: "80px",
+  [theme.breakpoints.down("sm")]: {
+    width: "60px",
+    height: "60px",
+  },
 }));
 
 const Text = styled(Typography)(({ theme }) => ({
