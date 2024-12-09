@@ -3,7 +3,7 @@ import getPostMetadata from "@/components/getPostMetadata";
 import React from "react";
 
 export const metadata = {
-  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_BASE_URL}`),
+  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_BASE_URL}/`),
   // Title and description
   title: "Blogs | Aryan More",
   description:
@@ -11,7 +11,7 @@ export const metadata = {
 
   // Canonical and Alternate Links
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/`,
+    canonical: `https://${process.env.NEXT_PUBLIC_BASE_URL}/blogs/`,
   },
 
   // Open Graph metadata
@@ -19,7 +19,7 @@ export const metadata = {
     title: "Blogs | Aryan More",
     description:
       "Explore insightful technical and non-technical blogs covering coding, development tips, and personal experiences. Stay updated with diverse topics that inspire learning and growth.",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/`,
+    url: `https://${process.env.NEXT_PUBLIC_BASE_URL}/blogs/`,
     siteName: "Aryan More",
     images: [
       {

@@ -1,7 +1,7 @@
 import ProjectPage from "@/components/projects_page_components/ProjectPage";
 
 export const metadata = {
-  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_BASE_URL}`),
+  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_BASE_URL}/`),
   // Title and description
   title: "Projects | Aryan More",
   description:
@@ -9,7 +9,7 @@ export const metadata = {
 
   // Canonical and Alternate Links
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/projects/`,
+    canonical: `https://${process.env.NEXT_PUBLIC_BASE_URL}/projects/`,
   },
 
   // Open Graph metadata
@@ -17,7 +17,7 @@ export const metadata = {
     title: "Projects | Aryan More",
     description:
       "Explore a variety of frontend web development projects showcasing React, Next.js, and more. From interactive apps to creative UIs, these projects highlight user-focused design and modern development techniques.",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/projects/`,
+    url: `https://${process.env.NEXT_PUBLIC_BASE_URL}/projects/`,
     siteName: "Aryan More",
     images: [
       {

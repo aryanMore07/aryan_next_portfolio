@@ -9,7 +9,7 @@ export const metadata = {
 
   // Canonical and Alternate Links
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+    canonical: `https://${process.env.NEXT_PUBLIC_BASE_URL}/`,
   },
 
   // Open Graph metadata
@@ -17,7 +17,7 @@ export const metadata = {
     title: "Home | Aryan More",
     description:
       "I'm a frontend developer skilled in React, Next.js, and MUI. I build responsive, user-friendly web applications with a focus on performance and usability. Check out my projects to see how I turn creative ideas into seamless digital experiences!",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+    url: `https://${process.env.NEXT_PUBLIC_BASE_URL}/`,
     siteName: "Aryan More",
     images: [
       {

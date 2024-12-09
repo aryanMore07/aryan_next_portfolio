@@ -19,7 +19,7 @@ export const generateMetadata = ({ params }) => {
     title: blogData.data.title,
     description: blogData.data.subtitle,
     openGraph: {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${params.slug}`,
+      url: `https://${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${params.slug}/`,
       images: blogData.data.image,
       description: blogData.data.subtitle,
     },

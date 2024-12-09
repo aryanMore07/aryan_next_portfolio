@@ -8,7 +8,6 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
