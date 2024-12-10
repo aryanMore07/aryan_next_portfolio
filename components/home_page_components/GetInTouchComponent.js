@@ -73,7 +73,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.primary.main,
   fontFamily: "Pacifico, cursive",
-  marginBottom: theme.spacing(10),
+  marginBottom: theme.spacing(5),
   [theme.breakpoints.down("md")]: {
     marginBottom: theme.spacing(0),
   },
@@ -113,7 +113,7 @@ function GetInTouchComponent() {
   const mediaQueryMatch = isClient ? matches : false;
 
   return (
-    <Container>
+    <Container id="get-in-touch">
       <InnerContainer>
         <Heading>Get In Touch</Heading>
         <Grid2

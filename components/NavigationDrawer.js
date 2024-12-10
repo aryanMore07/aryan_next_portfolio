@@ -19,6 +19,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import MailIcon from "@mui/icons-material/Mail";
+import Link from "next/link";
 
 const Header = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -130,17 +131,26 @@ function NavigationDrawer({ open, setOpen }) {
         <MenuListComponent>
           {navbar_context.menu_links.map((link) => {
             return (
-              <MenuItemComponent
-                key={link._id}
+              <Link
+                style={{ textDecoration: "none" }}
+                href={link.path}
                 onClick={() => {
-                  router.push(link.path);
                   setOpen(false);
                 }}
+                key={link._id}
               >
-                {link.title}
-              </MenuItemComponent>
+                <MenuItemComponent>{link.title}</MenuItemComponent>
+              </Link>
             );
           })}
+          <MenuItemComponent
+            onClick={() => {
+              router.push("/#get-in-touch");
+              setOpen(false);
+            }}
+          >
+            Get In Touch
+          </MenuItemComponent>
         </MenuListComponent>
       </Body>
       <Divider
@@ -150,7 +160,7 @@ function NavigationDrawer({ open, setOpen }) {
         }}
         orientation="horizontal"
       >
-        Contact me
+        Let's connect
       </Divider>
       <Footer>
         {" "}
@@ -160,7 +170,10 @@ function NavigationDrawer({ open, setOpen }) {
               <Tooltip title={data.text} key={data._id}>
                 <IconButtonComponent
                   onClick={() => {
-                    router.push(data.path);
+                    document
+                      .getElementById("get-in-touch")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setOpen(false);
                   }}
                 >
                   {renderIcons(data.text)}
