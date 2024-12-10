@@ -160,7 +160,7 @@ function NavigationDrawer({ open, setOpen }) {
         }}
         orientation="horizontal"
       >
-        Let's connect
+         Let&apos;s connect
       </Divider>
       <Footer>
         {" "}
