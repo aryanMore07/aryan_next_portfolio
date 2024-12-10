@@ -113,7 +113,7 @@ function GetInTouchComponent() {
   const mediaQueryMatch = isClient ? matches : false;
 
   return (
-    <Container id="get-in-touch">
+    <Container id="lets-connect">
       <InnerContainer>
         <Heading>Get In Touch</Heading>
         <Grid2

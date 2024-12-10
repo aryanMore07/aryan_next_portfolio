@@ -145,7 +145,7 @@ function NavigationDrawer({ open, setOpen }) {
           })}
           <MenuItemComponent
             onClick={() => {
-              router.push("/#get-in-touch");
+              router.push("/#lets-connect");
               setOpen(false);
             }}
           >
