@@ -21,13 +21,7 @@ const Container = styled(Box)(({ theme, ishomepage }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-<<<<<<< HEAD
-  backgroundColor: ishomepage
-    ? theme.palette.secondary.main
-    : theme.palette.primary.main,
-=======
   backgroundColor: theme.palette.primary.main,
->>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
 }));
 
 const InnerContainer = styled(Box)(({ theme }) => ({
@@ -45,11 +39,7 @@ const Heading = styled(Typography)(({ theme, ishomepage }) => ({
   fontWeight: 400,
   lineHeight: "32px",
   fontFamily: "Pacifico, cursive",
-<<<<<<< HEAD
-  color: ishomepage ? theme.palette.primary.main : "#fff",
-=======
   color: "#fff",
->>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
   textWrap: "nowrap",
   cursor: "pointer",
   margin: "0px",
@@ -64,11 +54,7 @@ const MiddleText = styled(Typography)(({ theme, ishomepage }) => ({
   lineHeight: "26px",
   color: "#000",
   margin: "0px",
-<<<<<<< HEAD
-  color: ishomepage ? "#000" : "#fff",
-=======
   color: "#fff",
->>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
   [theme.breakpoints.down("md")]: {
     display: "none",
   },
@@ -110,29 +96,16 @@ function Footer() {
   };
 
   return (
-<<<<<<< HEAD
-    <Container ishomepage={pathName === "/"}>
-      <InnerContainer>
-        <Heading
-          ishomepage={pathName === "/"}
-=======
     <Container>
       <InnerContainer>
         <Heading
->>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
           onClick={() => {
             router.push("/");
           }}
         >
           {footer_context.title}
         </Heading>
-<<<<<<< HEAD
-        <MiddleText ishomepage={pathName === "/"}>
-          {footer_context.middle_text}
-        </MiddleText>
-=======
         <MiddleText>{footer_context.middle_text}</MiddleText>
->>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
         <SocialLinksContainer>
           {footer_context.social_links.map((data) => {
             return (
