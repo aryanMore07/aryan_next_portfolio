@@ -113,7 +113,7 @@ function NavigationDrawer({ open, setOpen }) {
         setOpen(false);
       }}
       onOpen={() => {
-        setOpen(true);
+        return null;
       }}
     >
       <Header>
