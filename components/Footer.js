@@ -8,8 +8,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
@@ -22,9 +21,13 @@ const Container = styled(Box)(({ theme, ishomepage }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+<<<<<<< HEAD
   backgroundColor: ishomepage
     ? theme.palette.secondary.main
     : theme.palette.primary.main,
+=======
+  backgroundColor: theme.palette.primary.main,
+>>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
 }));
 
 const InnerContainer = styled(Box)(({ theme }) => ({
@@ -42,7 +45,11 @@ const Heading = styled(Typography)(({ theme, ishomepage }) => ({
   fontWeight: 400,
   lineHeight: "32px",
   fontFamily: "Pacifico, cursive",
+<<<<<<< HEAD
   color: ishomepage ? theme.palette.primary.main : "#fff",
+=======
+  color: "#fff",
+>>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
   textWrap: "nowrap",
   cursor: "pointer",
   margin: "0px",
@@ -57,7 +64,11 @@ const MiddleText = styled(Typography)(({ theme, ishomepage }) => ({
   lineHeight: "26px",
   color: "#000",
   margin: "0px",
+<<<<<<< HEAD
   color: ishomepage ? "#000" : "#fff",
+=======
+  color: "#fff",
+>>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
   [theme.breakpoints.down("md")]: {
     display: "none",
   },
@@ -80,45 +91,48 @@ const IconButtonComponent = styled(IconButton)(({ theme }) => ({
   },
 }));
 
-const iconsStyles = (currentPath) => {
-  if (currentPath) {
-    return { color: "#000", fontSize: "20px" };
-  } else {
-    return { color: "#fff", fontSize: "20px" };
-  }
-};
+const iconsStyles = { color: "#fff", fontSize: "20px" };
 
 function Footer() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const router = useRouter();
-  const pathName = usePathname();
 
   const renderIcons = (text) => {
     if (text === "LinkedIn") {
-      return <LinkedInIcon style={iconsStyles(pathName === "/")} />;
+      return <LinkedInIcon style={iconsStyles} />;
     } else if (text === "X (Formerly Twitter)") {
-      return <XIcon style={iconsStyles(pathName === "/")} />;
+      return <XIcon style={iconsStyles} />;
     } else if (text === "Github") {
-      return <GitHubIcon style={iconsStyles(pathName === "/")} />;
+      return <GitHubIcon style={iconsStyles} />;
     } else {
-      return <MailIcon style={iconsStyles(pathName === "/")} />;
+      return <MailIcon style={iconsStyles} />;
     }
   };
 
   return (
+<<<<<<< HEAD
     <Container ishomepage={pathName === "/"}>
       <InnerContainer>
         <Heading
           ishomepage={pathName === "/"}
+=======
+    <Container>
+      <InnerContainer>
+        <Heading
+>>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
           onClick={() => {
             router.push("/");
           }}
         >
           {footer_context.title}
         </Heading>
+<<<<<<< HEAD
         <MiddleText ishomepage={pathName === "/"}>
           {footer_context.middle_text}
         </MiddleText>
+=======
+        <MiddleText>{footer_context.middle_text}</MiddleText>
+>>>>>>> bd70d4911d93fdce738f159e0197d09730d14e71
         <SocialLinksContainer>
           {footer_context.social_links.map((data) => {
             return (

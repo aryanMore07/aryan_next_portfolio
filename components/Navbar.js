@@ -12,9 +12,10 @@ import {
 import { styled } from "@mui/material/styles";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { MdDownload } from "react-icons/md";
 import MenuIcon from "@mui/icons-material/Menu";
+import NavigationDrawer from "./NavigationDrawer";
 
 const Container = styled(AppBar)(({ theme }) => ({
   width: "100%",
@@ -118,43 +119,55 @@ function HideOnScroll(props) {
 }
 
 function Navbar(props) {
+  const [open, setOpen] = useState(false);
   const router = useRouter();
 
+  const handleNavigationDrawer = (payload) => {
+    setOpen(payload);
+  };
+
   return (
-    <HideOnScroll {...props}>
-      <Container>
-        <InnerContainer>
-          <Heading
-            onClick={() => {
-              router.push("/");
-            }}
-          >
-            Aryan More
-          </Heading>
-          <MiddleContainer>
-            {navbar_context.menu_links.map((link) => {
-              return (
-                <LinkComponent href={link.path} key={link._id}>
-                  {link.title}
-                </LinkComponent>
-              );
-            })}
-          </MiddleContainer>
-          <Link
-            href="/files/aryan_resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <DownloadBtn endIcon={<MdDownload />} variant="outlined">
-              Download Resume
-            </DownloadBtn>
-          </Link>
-          <HanbergerMenuBtn>
-            <MenuIcon sx={{ color: "#fff" }} />
-          </HanbergerMenuBtn>
-        </InnerContainer>
-      </Container>
-    </HideOnScroll>
+    <>
+      <HideOnScroll {...props}>
+        <Container>
+          <InnerContainer>
+            <Heading
+              onClick={() => {
+                router.push("/");
+              }}
+            >
+              Aryan More
+            </Heading>
+            <MiddleContainer>
+              {navbar_context.menu_links.map((link) => {
+                return (
+                  <LinkComponent href={link.path} key={link._id}>
+                    {link.title}
+                  </LinkComponent>
+                );
+              })}
+            </MiddleContainer>
+            <Link
+              href="/files/aryan_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <DownloadBtn endIcon={<MdDownload />} variant="outlined">
+                Download Resume
+              </DownloadBtn>
+            </Link>
+            <HanbergerMenuBtn
+              onClick={() => {
+                handleNavigationDrawer(true);
+              }}
+            >
+              <MenuIcon sx={{ color: "#fff" }} />
+            </HanbergerMenuBtn>
+          </InnerContainer>
+        </Container>
+      </HideOnScroll>
+      <NavigationDrawer open={open} setOpen={handleNavigationDrawer} />
+    </>
   );
 }
 
