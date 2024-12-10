@@ -42,7 +42,7 @@ function BlogListingPage({ data }) {
         <Grid2 container spacing={2} justifyContent="center">
           {data.map((blog, index) => {
             return (
-              <Grid2 item size={{ md: 3 }} key={index}>
+              <Grid2 size={{ md: 3 }} key={index}>
                 <BlogCard data={blog} />
               </Grid2>
             );

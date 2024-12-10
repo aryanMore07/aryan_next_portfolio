@@ -149,7 +149,7 @@ function ProjectCard({ data }) {
           {data.tech_stacks.map((item) => renderIcon(item))}
         </Stack>
         <Grid2 container spacing={1}>
-          <Grid2 item size={{ xs: 6, sm: 6, md: 6 }}>
+          <Grid2 size={{ xs: 6, sm: 6, md: 6 }}>
             <Button
               sx={{ textWrap: "nowrap" }}
               fullWidth
@@ -161,7 +161,7 @@ function ProjectCard({ data }) {
               {data.btn_texts.live_project_btn_context.text}
             </Button>
           </Grid2>
-          <Grid2 item size={{ xs: 6, sm: 6, md: 6 }}>
+          <Grid2 size={{ xs: 6, sm: 6, md: 6 }}>
             <Button
               sx={{ textWrap: "nowrap" }}
               fullWidth

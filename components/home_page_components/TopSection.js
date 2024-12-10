@@ -96,12 +96,12 @@ function TopSection() {
     <Container>
       <InnerContainer>
         <Grid2 container>
-          <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
+          <Grid2 size={{ xs: 12, sm: 12, md: 6 }}>
             <ImageContainer>
               <ImageComponent src={aryan} alt="Aryan More" />
             </ImageContainer>
           </Grid2>
-          <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
+          <Grid2 size={{ xs: 12, sm: 12, md: 6 }}>
             <TextContainer>
               <Heading>{homepage_context.top_section_context.title}</Heading>
               <SubHeading>
