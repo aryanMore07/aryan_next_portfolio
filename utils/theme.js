@@ -11,6 +11,9 @@ export const theme = createTheme({
       xl: 1920,
     },
   },
+  typography: {
+    fontFamily: "Poppins",
+  },
   palette: {
     primary: {
       main: "#800080",
