@@ -66,7 +66,7 @@ function BlogCard({ data }) {
           height={1000}
           style={{ width: "100%", height: "100%" }}
           src={data.image}
-          atl={data.title}
+          alt={data.title}
         />
       </ImageContainer>
       <BottomContainer>

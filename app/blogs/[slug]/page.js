@@ -4,13 +4,20 @@ import matter from "gray-matter";
 import getPostMetadata from "@/components/getPostMetadata";
 import React from "react";
 import { url } from "inspector";
+import { notFound } from "next/navigation";
 
 const getPostContent = (slug) => {
-  const folder = "posts/";
-  const file = `${folder}${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
-  const matterResult = matter(content);
-  return matterResult;
+  try {
+    const folder = "posts/";
+    const file = `${folder}${slug}.md`;
+    const content = fs.readFileSync(file, "utf8");
+    const matterResult = matter(content);
+    return matterResult;
+  } catch (error) {
+    if (error) {
+      notFound();
+    }
+  }
 };
 
 export const generateMetadata = ({ params }) => {
