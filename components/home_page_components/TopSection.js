@@ -1,7 +1,7 @@
 "use client";
 import { Box, Grid2 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import aryan from "/public/aryan.png";
+import aryan from "/public/aryan.webp";
 import React from "react";
 import Image from "next/image";
 import bgImage from "/public/bg.png";
