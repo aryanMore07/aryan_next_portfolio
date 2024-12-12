@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Divider,
   IconButton,
   MenuItem,
@@ -91,6 +92,20 @@ const iconStyles = {
   fontSize: "18px",
 };
 
+const DownloadBtn = styled(Button)(({ theme }) => ({
+  textWrap: "nowrap",
+  border: `1px solid ${theme.palette.secondary.main}`,
+  color: theme.palette.primary.main,
+  borderColor: theme.palette.secondary.main,
+  textTransform: "capitalize",
+  width: "100%",
+  "&:hover": {
+    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.secondary.main,
+    border: `1px solid ${theme.palette.secondary.main}`,
+  },
+}));
+
 function NavigationDrawer({ open, setOpen }) {
   const router = useRouter();
 
@@ -151,6 +166,19 @@ function NavigationDrawer({ open, setOpen }) {
           >
             Get In Touch
           </MenuItemComponent>
+          <MenuItemComponent>
+            <Link
+              style={{
+                color: theme.palette.primary.light,
+                textDecoration: "none",
+              }}
+              href="/files/aryan_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Resume
+            </Link>
+          </MenuItemComponent>
         </MenuListComponent>
       </Body>
       <Divider
@@ -160,7 +188,7 @@ function NavigationDrawer({ open, setOpen }) {
         }}
         orientation="horizontal"
       >
-         Let&apos;s connect
+        Let&apos;s connect
       </Divider>
       <Footer>
         {" "}
