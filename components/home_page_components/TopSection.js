@@ -3,7 +3,6 @@ import { Box, Grid2 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import aryan from "/public/aryan.webp";
 import React from "react";
-import Image from "next/image";
 import bgImage from "/public/bg.png";
 import { homepage_context } from "@/utils/textUtils";
 
@@ -37,7 +36,7 @@ const ImageContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
 }));
 
-const ImageComponent = styled(Image)(({ theme }) => ({
+const ImageComponent = styled("img")(({ theme }) => ({
   width: "350px",
   height: "350px",
   borderRadius: "50%",
@@ -98,7 +97,7 @@ function TopSection() {
         <Grid2 container>
           <Grid2 size={{ xs: 12, sm: 12, md: 6 }}>
             <ImageContainer>
-              <ImageComponent src={aryan} alt="Aryan More" />
+              <ImageComponent src={aryan.src} alt="Aryan More" />
             </ImageContainer>
           </Grid2>
           <Grid2 size={{ xs: 12, sm: 12, md: 6 }}>
