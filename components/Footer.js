@@ -16,7 +16,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import MailIcon from "@mui/icons-material/Mail";
 import { theme } from "@/utils/theme";
 
-const Container = styled(Box)(({ theme, isHomePage }) => ({
+const Container = styled(Box)(({ theme, ishomepage }) => ({
   width: "100%",
   display: "flex",
   justifyContent: "center",
@@ -34,7 +34,7 @@ const InnerContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
 }));
 
-const Heading = styled(Typography)(({ theme, isHomePage }) => ({
+const Heading = styled(Typography)(({ theme, ishomepage }) => ({
   fontSize: "24px",
   fontWeight: 400,
   lineHeight: "32px",
@@ -48,7 +48,7 @@ const Heading = styled(Typography)(({ theme, isHomePage }) => ({
   },
 }));
 
-const MiddleText = styled(Typography)(({ theme, isHomePage }) => ({
+const MiddleText = styled(Typography)(({ theme, ishomepage }) => ({
   fontSize: "18px",
   fontWeight: 400,
   lineHeight: "26px",

@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Divider,
   IconButton,
   MenuItem,
@@ -19,6 +20,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import MailIcon from "@mui/icons-material/Mail";
+import Link from "next/link";
 
 const Header = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -90,6 +92,20 @@ const iconStyles = {
   fontSize: "18px",
 };
 
+const DownloadBtn = styled(Button)(({ theme }) => ({
+  textWrap: "nowrap",
+  border: `1px solid ${theme.palette.secondary.main}`,
+  color: theme.palette.primary.main,
+  borderColor: theme.palette.secondary.main,
+  textTransform: "capitalize",
+  width: "100%",
+  "&:hover": {
+    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.secondary.main,
+    border: `1px solid ${theme.palette.secondary.main}`,
+  },
+}));
+
 function NavigationDrawer({ open, setOpen }) {
   const router = useRouter();
 
@@ -130,17 +146,39 @@ function NavigationDrawer({ open, setOpen }) {
         <MenuListComponent>
           {navbar_context.menu_links.map((link) => {
             return (
-              <MenuItemComponent
-                key={link._id}
+              <Link
+                style={{ textDecoration: "none" }}
+                href={link.path}
                 onClick={() => {
-                  router.push(link.path);
                   setOpen(false);
                 }}
+                key={link._id}
               >
-                {link.title}
-              </MenuItemComponent>
+                <MenuItemComponent>{link.title}</MenuItemComponent>
+              </Link>
             );
           })}
+          <MenuItemComponent
+            onClick={() => {
+              router.push("/#lets-connect");
+              setOpen(false);
+            }}
+          >
+            Get In Touch
+          </MenuItemComponent>
+          <MenuItemComponent>
+            <Link
+              style={{
+                color: theme.palette.primary.light,
+                textDecoration: "none",
+              }}
+              href="/files/aryan_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Resume
+            </Link>
+          </MenuItemComponent>
         </MenuListComponent>
       </Body>
       <Divider
@@ -150,7 +188,7 @@ function NavigationDrawer({ open, setOpen }) {
         }}
         orientation="horizontal"
       >
-        Contact me
+        Let&apos;s connect
       </Divider>
       <Footer>
         {" "}
@@ -160,7 +198,10 @@ function NavigationDrawer({ open, setOpen }) {
               <Tooltip title={data.text} key={data._id}>
                 <IconButtonComponent
                   onClick={() => {
-                    router.push(data.path);
+                    document
+                      .getElementById("get-in-touch")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setOpen(false);
                   }}
                 >
                   {renderIcons(data.text)}
