@@ -8,7 +8,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-MHC6TTVK" />
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
       <body>
         <ThemeProvider theme={theme}>
           <div>
