@@ -3,7 +3,6 @@ import BlogDetailsPage from "@/components/blog_page_components/BlogDetailsPage";
 import matter from "gray-matter";
 import getPostMetadata from "@/components/getPostMetadata";
 import React from "react";
-import { url } from "inspector";
 import { notFound } from "next/navigation";
 
 const getPostContent = (slug) => {
