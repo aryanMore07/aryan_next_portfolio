@@ -108,7 +108,6 @@ const DownloadBtn = styled(Button)(({ theme }) => ({
 
 function NavigationDrawer({ open, setOpen }) {
   const router = useRouter();
-
   const renderIcons = (text) => {
     if (text === "LinkedIn") {
       return <LinkedInIcon style={iconStyles} />;
@@ -120,6 +119,7 @@ function NavigationDrawer({ open, setOpen }) {
       return <MailIcon style={iconStyles} />;
     }
   };
+
   return (
     <SwipeableDrawer
       sx={{ "& .MuiDrawer-paper": { width: "100%" } }}
@@ -198,9 +198,7 @@ function NavigationDrawer({ open, setOpen }) {
               <Tooltip title={data.text} key={data._id}>
                 <IconButtonComponent
                   onClick={() => {
-                    document
-                      .getElementById("get-in-touch")
-                      ?.scrollIntoView({ behavior: "smooth" });
+                    router.push(data.path);
                     setOpen(false);
                   }}
                 >
