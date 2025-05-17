@@ -7,6 +7,7 @@ import {
   IconButton,
   Slide,
   Typography,
+  useMediaQuery,
   useScrollTrigger,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -15,7 +16,8 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { MdDownload } from "react-icons/md";
 import NavigationDrawer from "./NavigationDrawer";
-import { Turn as Hamburger } from 'hamburger-react'
+import { Turn as Hamburger } from "hamburger-react";
+import { theme } from "@/utils/theme";
 
 const Container = styled(AppBar)(({ theme }) => ({
   width: "100%",
@@ -122,6 +124,7 @@ function HideOnScroll(props) {
 }
 
 function Navbar(props) {
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
@@ -159,7 +162,7 @@ function Navbar(props) {
                 Download Resume
               </DownloadBtn>
             </Link>
-            <Hamburger toggled={open} toggle={setOpen} size={24} />
+            {matches && <Hamburger toggled={open} toggle={setOpen} size={24} />}
           </InnerContainer>
         </Container>
       </HideOnScroll>
