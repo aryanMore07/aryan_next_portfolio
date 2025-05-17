@@ -3,7 +3,7 @@ import HomePageComponent from "@/components/home_page_components/HomePageCompone
 export const metadata = {
   metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_BASE_URL}/`),
   // Title and description
-  title: "Home | Aryan More",
+  title: "Aryan More",
   description:
     "I'm a frontend developer skilled in Next.js, React.js, Redux, and MUI. I build responsive, user-friendly web applications with a focus on performance and usability. Check out my projects to see how I turn creative ideas into seamless digital experiences!",
 
@@ -14,7 +14,7 @@ export const metadata = {
 
   // Open Graph metadata
   openGraph: {
-    title: "Home | Aryan More",
+    title: "Aryan More",
     description:
       "I'm a frontend developer skilled in React, Next.js, and MUI. I build responsive, user-friendly web applications with a focus on performance and usability. Check out my projects to see how I turn creative ideas into seamless digital experiences!",
     url: `https://${process.env.NEXT_PUBLIC_BASE_URL}/`,
@@ -32,7 +32,7 @@ export const metadata = {
   // Twitter metadata
   twitter: {
     card: "summary_large_image",
-    title: "Home | Aryan More",
+    title: "Aryan More",
     description:
       "I'm a frontend developer skilled in React, Next.js, and MUI. I build responsive, user-friendly web applications with a focus on performance and usability. Check out my projects to see how I turn creative ideas into seamless digital experiences!",
     image: "/opengraph-image.png",
