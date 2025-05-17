@@ -12,7 +12,7 @@ const Container = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     padding: `${theme.spacing(5)} 0px`,
   },
 }));

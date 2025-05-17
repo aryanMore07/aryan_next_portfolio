@@ -1,17 +1,14 @@
 import {
   Box,
-  Button,
   Divider,
   IconButton,
   MenuItem,
   MenuList,
   SwipeableDrawer,
   Tooltip,
-  Typography,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React from "react";
-import CloseIcon from "@mui/icons-material/Close";
 import { navbar_context } from "@/utils/textUtils";
 import { useRouter } from "next/navigation";
 import { theme } from "@/utils/theme";
@@ -21,18 +18,6 @@ import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import MailIcon from "@mui/icons-material/Mail";
 import Link from "next/link";
-
-const Header = styled(Box)(({ theme }) => ({
-  width: "100%",
-  height: "55px",
-  padding: `${theme.spacing(1)} ${theme.spacing(2)}`,
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  backgroundColor: theme.palette.primary.main,
-  boxShadow:
-    "0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);",
-}));
 
 const Body = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -44,15 +29,6 @@ const Footer = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "65px",
   padding: `${theme.spacing(1)} ${theme.spacing(2)}`,
-}));
-
-const Title = styled(Typography)(({ theme }) => ({
-  width: "fit-context",
-  fontSize: "18px",
-  lineHeight: "24px",
-  color: theme.palette.primary.main,
-  fontFamily: "Pacifico, cursive",
-  color: "#fff",
 }));
 
 const MenuListComponent = styled(MenuList)(({ theme }) => ({
@@ -92,20 +68,6 @@ const iconStyles = {
   fontSize: "18px",
 };
 
-const DownloadBtn = styled(Button)(({ theme }) => ({
-  textWrap: "nowrap",
-  border: `1px solid ${theme.palette.secondary.main}`,
-  color: theme.palette.primary.main,
-  borderColor: theme.palette.secondary.main,
-  textTransform: "capitalize",
-  width: "100%",
-  "&:hover": {
-    color: theme.palette.primary.main,
-    backgroundColor: theme.palette.secondary.main,
-    border: `1px solid ${theme.palette.secondary.main}`,
-  },
-}));
-
 function NavigationDrawer({ open, setOpen }) {
   const router = useRouter();
   const renderIcons = (text) => {
@@ -122,7 +84,7 @@ function NavigationDrawer({ open, setOpen }) {
 
   return (
     <SwipeableDrawer
-      sx={{ "& .MuiDrawer-paper": { width: "100%" } }}
+      sx={{ "& .MuiDrawer-paper": { width: "100%", paddingTop: "55px" } }}
       anchor="right"
       open={open}
       onClose={() => {
@@ -132,16 +94,6 @@ function NavigationDrawer({ open, setOpen }) {
         return null;
       }}
     >
-      <Header>
-        <Title>Aryan More</Title>
-        <IconButton
-          onClick={() => {
-            setOpen(false);
-          }}
-        >
-          <CloseIcon sx={{ color: "#fff" }} />
-        </IconButton>
-      </Header>
       <Body>
         <MenuListComponent>
           {navbar_context.menu_links.map((link) => {

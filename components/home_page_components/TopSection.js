@@ -42,6 +42,14 @@ const ImageComponent = styled("img")(({ theme }) => ({
   borderRadius: "50%",
   padding: theme.spacing(5),
   backgroundImage: "linear-gradient(225deg, #800080 5%, #ffffff 95%)",
+  [theme.breakpoints.down("md")]: {
+    width: "280px",
+    height: "280px",
+  },
+  [theme.breakpoints.down(650)]: {
+    width: "240px",
+    height: "240px",
+  },
   [theme.breakpoints.down("sm")]: {
     width: "200px",
     height: "200px",

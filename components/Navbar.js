@@ -14,13 +14,14 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { MdDownload } from "react-icons/md";
-import MenuIcon from "@mui/icons-material/Menu";
 import NavigationDrawer from "./NavigationDrawer";
+import { Turn as Hamburger } from 'hamburger-react'
 
 const Container = styled(AppBar)(({ theme }) => ({
   width: "100%",
   height: "auto",
   position: "sticky",
+  zIndex: 1201,
 }));
 
 const InnerContainer = styled(Box)(({ theme }) => ({
@@ -96,9 +97,11 @@ const LinkComponent = styled(Link)(({ theme }) => ({
   },
 }));
 
-const HanbergerMenuBtn = styled(IconButton)(({ theme }) => ({
+const MuiIconBtn = styled(IconButton)(({ theme }) => ({
   display: "none",
   [theme.breakpoints.down("md")]: {
+    transition: "0.3",
+    rotate: open && "360deg",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -156,13 +159,7 @@ function Navbar(props) {
                 Download Resume
               </DownloadBtn>
             </Link>
-            <HanbergerMenuBtn
-              onClick={() => {
-                handleNavigationDrawer(true);
-              }}
-            >
-              <MenuIcon sx={{ color: "#fff" }} />
-            </HanbergerMenuBtn>
+            <Hamburger toggled={open} toggle={setOpen} size={24} />
           </InnerContainer>
         </Container>
       </HideOnScroll>
