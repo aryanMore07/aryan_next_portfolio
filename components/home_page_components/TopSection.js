@@ -10,15 +10,34 @@ const Container = styled(Box)(({ theme }) => ({
   width: "100%",
   minHeight: "calc(100vh - 55px)",
   display: "flex",
-  justifyContent: "center",
   alignItems: "center",
-  backgroundImage: `url(${bgImage.src})`,
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  [theme.breakpoints.down("sm")]: {
-    padding: `${theme.spacing(5)} 0px`,
-  },
+  "--color": "#E1E1E1",
+  backgroundColor: "#F3F3F3",
+  backgroundImage: `linear-gradient(
+        0deg,
+        transparent 24%,
+        var(--color) 25%,
+        var(--color) 26%,
+        transparent 27%,
+        transparent 74%,
+        var(--color) 75%,
+        var(--color) 76%,
+        transparent 77%,
+        transparent
+      ),
+      linear-gradient(
+        90deg,
+        transparent 24%,
+        var(--color) 25%,
+        var(--color) 26%,
+        transparent 27%,
+        transparent 74%,
+        var(--color) 75%,
+        var(--color) 76%,
+        transparent 77%,
+        transparent
+      )`,
+  backgroundSize: "55px 55px",
 }));
 
 const InnerContainer = styled(Box)(({ theme }) => ({
