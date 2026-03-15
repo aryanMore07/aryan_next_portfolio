@@ -1,9 +1,9 @@
 "use client";
 import { Box, Grid2 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import aryan from "/public/aryan.webp";
+import aryan from "@/public/aryan.webp";
 import React from "react";
-import bgImage from "/public/bg.png";
+import bgImage from "@/public/bg.png";
 import { homepage_context } from "@/utils/textUtils";
 
 const Container = styled(Box)(({ theme }) => ({
