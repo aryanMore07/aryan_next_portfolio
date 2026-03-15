@@ -14,7 +14,6 @@ import { styled } from "@mui/material/styles";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { MdDownload } from "react-icons/md";
 import NavigationDrawer from "./NavigationDrawer";
 import { Turn as Hamburger } from "hamburger-react";
 import { theme } from "@/utils/theme";
@@ -158,7 +157,7 @@ function Navbar(props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <DownloadBtn endIcon={<MdDownload />} variant="outlined">
+              <DownloadBtn variant="outlined">
                 Download Resume
               </DownloadBtn>
             </Link>

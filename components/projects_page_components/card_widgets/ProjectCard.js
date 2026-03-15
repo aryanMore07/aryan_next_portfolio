@@ -35,7 +35,10 @@ const ImageContainer = styled(Box)(({ theme }) => ({
 
 const ImageComponent = styled(Image)(({ theme }) => ({
   width: "100%",
-  height: "100%",
+  height: "183px",
+  [theme.breakpoints.down("md")]: {
+    height: "153px",
+  }
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
