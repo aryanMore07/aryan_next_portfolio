@@ -84,7 +84,9 @@ const Heading = styled(Typography)(({ theme }) => ({
 
 const Input = styled(TextField)(({ theme }) => ({}));
 
-const SubmitBtn = styled(Button)(({ theme }) => ({}));
+const SubmitBtn = styled(Button)(({ theme }) => ({
+  fontFamily: "Poppins",
+}));
 
 const LottieComponent = styled(Lottie)(({ theme }) => ({
   width: "100%",

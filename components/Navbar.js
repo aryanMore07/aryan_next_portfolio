@@ -39,7 +39,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "24px",
   fontWeight: 400,
   lineHeight: "32px",
-  fontFamily: "Pacifico, cursive",
+  fontFamily: "Pacifico, poppins, serif",
   color: "#fff",
   textWrap: "nowrap",
   cursor: "pointer",
@@ -66,6 +66,7 @@ const DownloadBtn = styled(Button)(({ theme }) => ({
   color: theme.palette.secondary.main,
   borderColor: theme.palette.secondary.main,
   textTransform: "capitalize",
+  fontFamily: "Poppins",
   "&:hover": {
     color: theme.palette.primary.main,
     backgroundColor: theme.palette.secondary.main,

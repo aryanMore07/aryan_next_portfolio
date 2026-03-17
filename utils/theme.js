@@ -12,7 +12,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Poppins",
+    fontFamily: "Poppins, serif",
   },
   palette: {
     primary: {
@@ -20,6 +20,15 @@ export const theme = createTheme({
     },
     secondary: {
       main: "#fff",
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontFamily: "--fonts-poppins",
+        },
+      },
     },
   },
 });

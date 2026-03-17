@@ -38,7 +38,7 @@ const ImageComponent = styled(Image)(({ theme }) => ({
   height: "183px",
   [theme.breakpoints.down("md")]: {
     height: "153px",
-  }
+  },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -154,7 +154,7 @@ function ProjectCard({ data }) {
         <Grid2 container spacing={1}>
           <Grid2 size={{ xs: 6, sm: 6, md: 6 }}>
             <Button
-              sx={{ textWrap: "nowrap" }}
+              sx={{ textWrap: "nowrap", fontFamily: "Poppins" }}
               fullWidth
               variant="outlined"
               onClick={() => {
@@ -166,7 +166,7 @@ function ProjectCard({ data }) {
           </Grid2>
           <Grid2 size={{ xs: 6, sm: 6, md: 6 }}>
             <Button
-              sx={{ textWrap: "nowrap" }}
+              sx={{ textWrap: "nowrap", fontFamily: "Poppins" }}
               fullWidth
               variant="contained"
               onClick={() => {
